@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Age calculator app</title>
+</head>
+<body>
+  <main>
+
+    <section>
+      <form name="form" method="get" autocomplete="on">
+
+        <div>
+          <label for="day" class="title" id="label-day">Day</label><br>
+          <input id="day" name="day" type="number" min="1" max="31" placeholder="DD" required><br>
+          <small id="error-day"></small>
+        </div>
+  
+      <div>
+        <label for="month" class="title" id="label-month">Month</label><br>
+        <input id="month" name="month" type="number" min="1" max="12" placeholder="MM" required><br>
+        <small id="error-month"></small>
+      </div>
+
+      <div>
+        <label for="year" class="title" id="label-year">Year</label><br>
+        <input id="year" name="year" type="text" minlength="4" max-length="4" placeholder="YYYY" required><br>
+        <small id="error-year"></small>
+      </div>
+
+
+      </form>
+    </section>
+  
+    <section>
+      <hr class="divider">
+      <button type="submit"><img src="assets/images/icon-arrow.svg"></button>
+      
+    </section>
+  
+    <section>
+      <div class="output"><span id="yy" class ="output-number">--</span>years</div>
+      <div class="output"><span id="mm" class ="output-number">--</span>months</div>
+      <div class="output"><span id="dd" class ="output-number">--</span>days</div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>

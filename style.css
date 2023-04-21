@@ -1,0 +1,138 @@
+@font-face {
+    font-family: Poppins Lighter;
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+
+@font-face {
+    font-family: Poppins;
+    src: url(./assets/fonts/Poppins-ExtraBold.ttf)
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 86%);
+    font-family: Poppins;
+    font-size: 16px;
+}
+
+main {
+    height: 550px;
+    width: 650px;
+    padding: 50px;
+    border: 1px solid hsl(0, 0%, 86%);
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px 20px 200px 20px;
+    margin: 120px auto;
+    display: absolute;
+}
+
+form {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    color: hsl(0, 1%, 44%);
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+}
+
+input {
+    width: 120px;
+    height: 60px;
+    padding: 20px;
+    color: hsl(0, 1%, 44%);
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    background-color: hsl(0, 0%, 100%);
+}
+
+img {
+    background-color: hsl(259, 100%, 65%);
+    display: inline-block;
+    border-radius: 50%;
+    width: 80px;
+    position: relative;
+    top: -50px;
+    left: 500px;
+    padding: 25px;
+}
+
+img:hover {
+    background-color: hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+
+.output {
+    font-size: 5em;
+    font-style: italic;
+    margin-bottom: -15px;
+}
+
+.output:first-of-type {
+    margin-top: -90px;
+}
+
+.output-number {
+    color: hsl(259, 100%, 65%);
+}
+
+small {
+    font-family: "Poppins Lighter";
+    font-weight: lighter;
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+@media screen and (max-width:576px) {
+    main {
+    height: 70vh;
+    width: 86vw;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 20px 20px 100px 20px;
+    }
+
+    form {
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+
+    .title {
+        letter-spacing: 2px;
+    }
+
+    input {
+        width: 80px;
+        height: 60px;
+        padding: 5px;
+    }
+
+    .divider {
+        margin-bottom: 30px;
+    }
+
+    img{
+    top: -73px;
+    left: 80px;
+    }
+
+    .output {
+    font-size: 3em;
+    margin-top: 0;
+    }
+}
