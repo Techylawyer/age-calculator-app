@@ -120,9 +120,7 @@ function validateDate() {
     currentYear = currentYear - 1  
     } 
 
-    yearOutput.innerText = (currentYear - yearInput.value) 
-
-    currentYear += 1
+    yearOutput.innerText = (currentYear - yearInput.value)
        }
 
     }
