@@ -134,7 +134,7 @@ small {
 @media screen and (max-width:576px) {
     main {
     height: 65vh;
-    width: 80vw;
+    width: 90vw;
     margin: 80px auto;
     padding: 30px 40px;
     border-radius: 20px 20px 100px 20px;
