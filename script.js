@@ -27,17 +27,16 @@ let currentYear = date.getFullYear();
 function calculateAge() {
   if (currentDay < dayInput.value){
     dayOutput.innerText = (dayInput.value - currentDay);
-  } if(currentDay > dayInput.value){
+  } if(currentDay > dayInput.value || currentDay == dayInput.value ){
     dayOutput.innerText = (currentDay - dayInput.value);
-  } if(currentMonth > monthInput.value){
+  } if(currentMonth > monthInput.value || currentMonth == monthInput.value) {
      monthOutput.innerText =  (currentMonth - monthInput.value) + 1;
   } if(currentMonth < monthInput.value) {
   monthOutput.innerText = ((currentMonth - monthInput.value) + 13);
   currentYear = currentYear - 1;
-  } if(currentMonth == (monthInput.value)) {
-    monthOutput.innerText = (currentMonth - monthInput.value) + 1;
-    
-  } yearOutput.innerText = (currentYear - yearInput.value);
+  }
+  
+  yearOutput.innerText = (currentYear - yearInput.value);
 }
 
 
