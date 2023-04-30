@@ -24,6 +24,22 @@ let currentDay = date.getDate();
 let currentMonth = date.getMonth();
 let currentYear = date.getFullYear();
 
+function calculateAge() {
+  if (currentDay < dayInput.value){
+    dayOutput.innerText = (dayInput.value - currentDay);
+  } if(currentDay > dayInput.value){
+    dayOutput.innerText = (currentDay - dayInput.value);
+  } if(currentMonth > monthInput.value){
+     monthOutput.innerText =  (currentMonth - monthInput.value) + 1;
+  } if(currentMonth < monthInput.value) {
+  monthOutput.innerText = ((currentMonth - monthInput.value) + 13);
+  currentYear = currentYear - 1;
+  } if(currentMonth == (monthInput.value)) {
+    monthOutput.innerText = (currentMonth - monthInput.value) + 1;
+    
+  } yearOutput.innerText = (currentYear - yearInput.value);
+}
+
 
 function validateDate() {
   dayError.innerText = ''
@@ -109,18 +125,7 @@ function validateDate() {
     yearLabel.style.color = "hsl(0, 100%, 67%)";
 
   }else  {
-    if (currentDay < dayInput.value){
-      dayOutput.innerText = ((currentDay - dayInput.value) + 30)
-    } if(currentDay > dayInput.value){
-      dayOutput.innerText = currentDay - dayInput.value
-    } if(currentMonth > monthInput.value){
-       monthOutput.innerText =  (currentMonth - monthInput.value)
-    } if(currentMonth < monthInput.value) {
-    monthOutput.innerText = ((currentMonth - monthInput.value) + 12)
-    currentYear = currentYear - 1  
-    } 
-
-    yearOutput.innerText = (currentYear - yearInput.value)
-       }
-
+    
+    calculateAge();
     }
+  }
